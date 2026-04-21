@@ -1,8 +1,10 @@
 package com.example.tarea3
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
+import android.widget.GridLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -24,6 +26,13 @@ class CatalogoActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        val orientation = resources.configuration.orientation
+        val grid = findViewById<GridLayout>(R.id.gridProductos)
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            grid.columnCount = 2
+        } else if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            grid.columnCount = 3
         }
         navigationView = findViewById(R.id.navigationView)
         drawerLayout = findViewById(R.id.drawerLayout)

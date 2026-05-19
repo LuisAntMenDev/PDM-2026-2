@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomeActivity">
+    <item
+        android:id="@+id/action_ajustes"
+        android:icon="@drawable/settings_24px"
+        android:orderInCategory="1"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_menu_option_1" />
+
+    <item
+        android:id="@+id/action_info"
+        android:icon="@drawable/info_24px"
+        android:orderInCategory="2"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_menu_option_2" />
+    <item
+        android:id="@+id/action_sesion"
+        android:icon="@drawable/logout_24px"
+        android:orderInCategory="3"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_menu_option_3" />
+
+</menu>
